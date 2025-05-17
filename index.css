@@ -5,6 +5,9 @@ body {
       line-height: 1.6;
       background-color: #f9f9f9;
     }
+h3{
+  text-transform: uppercase;
+}
 
     header {
       background-color: #333;
@@ -39,6 +42,40 @@ body {
       margin: auto;
     }
 
+    /* Base styling */
+    #profile{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    /* Image Column */
+    #profile .center{
+      flex: 0 0 25%;
+      text-align: center;
+    }
+    #profile .center img{
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      height: auto;
+    }
+    #profile .profile-text{
+      flex: 0 0 50%;
+    }
+    #profile .profile-text h2{
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    #profile .profile-text p{
+      font-size: 1rem;
+      line-height: 1.6;
+    }
     .profile {
       display: flex;
       flex-wrap: wrap;
@@ -65,6 +102,9 @@ body {
       border: 1px solid #ddd;
       border-radius: 10px;
     }
+    .project p{
+      text-align: justify;
+    }
 
     .project img {
       width: 100%;
@@ -77,6 +117,11 @@ body {
 /* Skill Section */
     .skill-container {
       margin-bottom: 20px;
+    }
+    .skill-header{
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
     }
 
     .skill-title {
@@ -103,7 +148,22 @@ body {
       transition: width 1.5s ease-in-out;
     }
 
+/* POW Section */
+    #projects h2{
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
 /* Socila Media Contact */
+    #contact h2{
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    #contact p{
+      text-align:center;
+    }
     .social-icons {
       display: flex;
       flex-wrap: wrap;
@@ -150,10 +210,20 @@ body {
         padding: 10px;
         }
         .profile-text{
-            text-align: center;
-            width: 100%;
-            margin: 0 auto;
-            padding: 5px;
+          margin-top: 0;
+          padding: 0;
+        }
+
+        #profile .center,
+        #profile .profile-text {
+          flex: 0 0 100%;
+        }
+        #profile .profile-text h2{
+          text-align: center;
+        }
+        #profile .profile-text {
+          /* padding-top: 20px; */
+          text-align: justify;
         }
         .skill-header{
             text-align: center;
@@ -174,8 +244,15 @@ body {
         width: 45px;
         height: 45px;
       }
+      h3{
+        text-align: center;
+      }
     }
-
+    @media (min-width: 768px) {
+      .see-more {
+        display: none;
+      }
+    }
     /* Custom Styles */
     .row{
       display: flex;
@@ -204,4 +281,23 @@ body {
     col-md{
       width: 100%;
       height: auto;
+    }
+
+    .paragraph {
+      max-height: 100px;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.5s ease;
+    }
+
+    .paragraph.expanded {
+      max-height: 1000px;
+    }
+
+    .see-more {
+      color: blue;
+      cursor: pointer;
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
     }

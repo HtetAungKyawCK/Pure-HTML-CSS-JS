@@ -90,21 +90,52 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>Personal Blog Website</h3>
-      <p>A fully responsive blog platform built using Next.js and Markdown. Includes dark mode and dynamic routing.</p>
-      <img src="https://via.placeholder.com/500x300" alt="Project 1">
+      <h3>Portfolio (Pure Styles)</h3>
+        <p class="paragraph" id="paragraph">
+          As part of my personal development, I designed and developed a fully responsive personal portfolio website using 
+          pure HTML, CSS, and JQuery, without relying on external frameworks or libraries. The project involved crafting a 
+          clean and intuitive user interface that adapts seamlessly across different screen sizes, from mobile to desktop.
+          I implemented various interactive elements such as smooth scrolling, animated skill bars, modals for project 
+          previews, and dynamic content transitions to enhance user engagement. By leveraging only fundamental web 
+          technologies, I was able to deepen my understanding of front-end development concepts, while also emphasizing 
+          performance optimization and semantic HTML structure. This website serves as a professional showcase of my 
+          background, technical skills, and selected works, and reflects both my attention to detail and commitment to 
+          creating functional, user-friendly designs from the ground up.
+        </p>
+        <span class="see-more" id="seeMoreBtn">See more...</span>
     </div>
 
     <div class="project">
-      <h3>Weather Forecast App</h3>
-      <p>JavaScript-based app that fetches live weather data using OpenWeatherMap API with dynamic UI updates.</p>
-      <img src="https://via.placeholder.com/500x300" alt="Project 2">
+      <h3>Portfolio (Framework)</h3>
+      <p class="paragraph" id="paragraph2">As part of my ongoing learning and professional development, I designed and built a personal portfolio website using
+         the Bootstrap framework to streamline responsive layout design and UI component integration. The project involved
+          customizing Bootstrap grid system and built-in components to create a modern, mobile-first design that 
+          effectively showcases my background, technical skills, and project work. I applied custom CSS alongside 
+          Bootstrap to refine the look and feel of the site beyond the default styles, ensuring a unique and polished 
+          user experience. The website features sections such as an introduction, skills overview, project gallery with 
+          modals, and a contact form — all structured to highlight usability and aesthetic consistency. This project not 
+          only helped me enhance my understanding of component-based design and front-end best practices, but also demonstrated
+          my ability to adapt frameworks like Bootstrap to meet specific creative and functional goals.
+        </p>
+        <span class="see-more" id="seeMoreBtn2">See more...</span>
     </div>
 
     <div class="project">
-      <h3>Task Manager</h3>
-      <p>Full-stack task management application built with Node.js, Express, and MongoDB. Includes authentication and CRUD functionality.</p>
-      <img src="https://via.placeholder.com/500x300" alt="Project 3">
+      <h3>Full Stack Project</h3>
+      <p class="paragraph" id="paragraph3">I developed a full-stack web application leveraging modern JavaScript 
+        technologies including Node.js for server-side logic and Next.js for building a scalable, high-performance 
+        frontend with integrated server-side rendering capabilities. On the client side, I used React-based components 
+        within the Next.js framework to create an interactive and responsive user interface, ensuring smooth navigation
+         and real-time data updates where needed. The backend was built with Node.js and Express.js, handling API routes, 
+         business logic, and database integration, with a focus on performance, scalability, and maintainability.
+          I implemented secure authentication, RESTful API endpoints, and database operations using technologies 
+          such as MongoDB or PostgreSQL, depending on project requirements. This project gave me hands-on experience 
+          in managing both frontend and backend development, handling full application workflows from data modeling 
+          and API design to UI rendering and deployment. It also strengthened my ability to build end-to-end 
+          JavaScript applications using a single language across the stack, which improved collaboration, development 
+          speed, and code consistency.
+        </p>
+      <span class="see-more" id="seeMoreBtn3">See more...</span>
     </div>
   </section>
 
@@ -115,31 +146,31 @@
     <p>Connect with me on social media:</p>
 
     <div class="social-icons">
-      <a href="https://www.facebook.com/HAKMLA/" target="_blank">
+      <a href="https://www.facebook.com/HAKMLA/" target="_blank" title="Facebook">
         <img src="images/facebook.png" alt="Facebook">
       </a>
-      <a href="https://www.instagram.com/cobraking152702/" target="_blank">
+      <a href="https://www.instagram.com/cobraking152702/" target="_blank" title="Instagram">
         <img src="images/instagram.jpg" alt="Instagram">
       </a>
-      <a href="viber://chat?number=%2B1234567890">
+      <a href="viber://chat?number=%2B1234567890" title="Viber">
         <img src="images/viber.png" alt="Viber">
       </a>
-      <a href="https://t.me/Cobra_King17" target="_blank">
+      <a href="https://t.me/Cobra_King17" target="_blank" title="Telegram">
         <img src="images/telegram.png" alt="Telegram">
       </a>
-      <a href="https://line.me/ti/p/yourID" target="_blank">
+      <a href="https://line.me/ti/p/yourID" target="_blank" title="Line">
         <img src="images/line.png" alt="Line">
       </a>
-      <a href="https://x.com/HtetAun16995761" target="_blank">
+      <a href="https://x.com/HtetAun16995761" target="_blank" title="Twitter">
         <img src="images/twitter.png" alt="Twitter">
       </a>
-      <a href="https://discord.com/@cobraking17" target="_blank">
+      <a href="https://discord.com/@cobraking17" target="_blank" title="Discord">
         <img src="images/Discord.png" alt="Discord">
       </a>
-      <a href="https://www.linkedin.com/in/htet-aung-kyaw-618182172/" target="_blank">
+      <a href="https://www.linkedin.com/in/htet-aung-kyaw-618182172/" target="_blank" title="LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn">
       </a>
-      <a href="https://github.com/HtetAungKyawCK" target="_blank">
+      <a href="https://github.com/HtetAungKyawCK" target="_blank" title="GitHub">
         <img src="images/github.png" alt="GitHub">
       </a>
     </div>
@@ -151,5 +182,37 @@
     <p>&copy; 2025 HAK. All Rights Reserved.</p>
   </footer>
 
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $('#seeMoreBtn').click(function () {
+    $('#paragraph').toggleClass('expanded');
+
+    if ($('#paragraph').hasClass('expanded')) {
+      $(this).text('See less...');
+    } else {
+      $(this).text('See more...');
+    }
+  });
+
+  $('#seeMoreBtn2').click(function(){
+  $('#paragraph2').toggleClass('expanded');
+    if ($('#paragraph2').hasClass('expanded')) {
+      $(this).text('See less...');
+    } else {
+      $(this).text('See more...');
+    }
+  });
+
+  $('#seeMoreBtn3').click(function(){
+  $('#paragraph3').toggleClass('expanded');
+    if ($('#paragraph2').hasClass('expanded')) {
+      $(this).text('See less...');
+    } else {
+      $(this).text('See more...');
+    }
+  });
+</script>
 </body>
 </html>
